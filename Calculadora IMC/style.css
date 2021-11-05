@@ -1,0 +1,79 @@
+main{/*localização geral da estrutura*/
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .container{/*estilo e local onde vai estar os inputs e calculos*/
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        background-color: rgb(255, 198, 0);
+        width: 400px;
+        height: 600px;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: 0 0 10px black;
+    }
+    
+    .titulo{/*estilo do Titulo da calculadora tamanho e local*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        font: bold 2.5rem serif;
+        border-bottom: solid 5px black;
+        margin-bottom: 20px;
+    }
+    
+    .input{/*localização e tamanho dos input*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+        height: 50px;
+    }
+    
+    .input input{/*estilo dos inputs*/
+        width: 200px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        outline: 0;
+        font: bold 1.5rem serif;
+        text-align: center;
+    }
+    
+    .input label{/*estilo da fonte da caixa onde vai ser posto os valores*/
+    font: bold 1.5rem serif;
+    }
+
+    button{/*estilo do botão de calcular*/
+    width: 300px;
+    height: 40px;
+    font: bold 1.5rem serif;
+    background: #000;
+    color: rgb(255, 198, 0);
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+    .result{/*estilo e localização do espaço onde vai aparecer o resultado do calculo*/
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    font: italic 1.5rem serif;
+    box-shadow: 0px 0px 10px #000;
+    background: #000;
+    color: rgb(255, 198, 0);
+    padding: 20px;
+    box-sizing: border-box;
+    user-select: none;
+    }
