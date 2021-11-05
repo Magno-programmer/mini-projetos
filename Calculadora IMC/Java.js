@@ -33,22 +33,27 @@ function imc(){
     }
 
     //Calculo feito e entrega do resultado
-    if(nome != '' && peso != '' && altura != ''){
-        const calculo = peso/(altura*altura).toFixed(1);
+    if(nome !== '' && peso !== '' && altura !== ''){
+        const calculo = (peso / (altura * altura)).toFixed(1);
 
-        if(calculo < 18,5){
-            resultado.innerHTML = `${calculo} é um valor muito baixo para um imc, você esta abaixo do peso.`;
-        }else if(calculo < 24,9){
-            resultado.innerHTML = `parabéns, seu imc é de ${calculo} e está no peso ideal.`
-        }else if(calculo < 29,9){
-            resultado.innerHTML = `cuidado, seu imc é de ${calculo} você esta com sobrepeso.`
-        }else if(calculo < 34,9){
-            resultado.innerHTML = `cuidado, seu imc é de ${calculo} você esta com obesidade Iº.`
-        }else if(calculo < 39,9){
-            resultado.innerHTML = `cuidado, seu imc é de ${calculo} você esta com obesidade IIº.`
+        let result = '';
+
+
+        if(calculo < 18.5){
+            result = 'está abaixo do peso';
+        }else if(calculo < 24.9){
+            result = 'está com peso ideal, parabéns'
+        }else if(calculo < 29.9){
+            result = 'está com sobrepeso';
+        }else if(calculo < 34.9){
+            result = 'está com obesidade Iº'
+        }else if(calculo < 39.9){
+            result = 'está com obesidade IIº'
         }else {
-            resultado.innerHTML = `ALERTA!!!, seu imc é de ${calculo} você esta com obesidade IIIº.`
+            result = 'está com obesidade IIIº, CUIDADO!!'
         }
+
+        resultado.textContent = `${nome}, seu imc é de ${calculo} você ${result}.`
 
     }
 
