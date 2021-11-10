@@ -1,0 +1,9 @@
+main{
+    display: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+button{
+    width: 80px;
+}
